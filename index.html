@@ -2,9 +2,6 @@
 <html lang="es" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <link title="timeline-styles" rel="stylesheet" href="https://cdn.knightlab.com/libs/timeline3/latest/css/timeline.css">
-
-    <script src="https://cdn.knightlab.com/libs/timeline3/latest/js/timeline.js"></script>
     <meta name="description" content="Timeline de la Guerra Fría">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-touch-fullscreen" content="yes">
@@ -12,7 +9,7 @@
     <link rel="icon" type="image/png" href="https://cdn.knightlab.com/libs/purpleline/latest/img/favicon.png">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <base target="_blank">
-    <!-- Style-->
+    <!-- Estilo: No hay Padding ni márgenes en la página. Además, la altura del timeline es de toda la pantalla. -->
     <style>
       html, body {
           width: 100%;
@@ -26,8 +23,13 @@
     </style>
     <!-- HTML5 shim, for IE6-8 support of HTML elements--><!--[if lt IE 9]>
     <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-    <link href="https://cdn.knightlab.com/libs/timeline3/latest/css/fonts/font.default.css?2.24" rel="stylesheet" class="lazyload" charset="utf-8">
+    
+    <!-- Paso 1: Cargar el estilo CSS y las fuentes -->
+    <link title="timeline-styles" rel="stylesheet" href="https://cdn.knightlab.com/libs/timeline3/latest/css/timeline.css">
+    <link title="timeline-styles" rel="stylesheet" href="https://cdn.knightlab.com/libs/timeline3/latest/css/fonts/font.abril-droidsans.css">
 
+    <!-- Paso 2: Cargar la librera en JS -->
+    <script src="https://cdn.knightlab.com/libs/timeline3/latest/js/timeline.js"></script>
   </head>
   <body>
     <!-- Definición del Timeline. Puede ocupar toda la pantalla, tanto en ancho como en alto. -->
@@ -35,6 +37,11 @@
 
     <!-- 3 -->
     <script type="text/javascript">
+      // Se definen las opciones del Timeline.
+      var options = {
+        language: "es",
+        initial_zoom: 2
+      }
       // The TL.Timeline constructor takes at least two arguments:
       // the id of the Timeline container (no '#'), and
       // the URL to your JSON data file or Google spreadsheet.
@@ -42,8 +49,11 @@
       // and the element must have CSS styling to give it width and height
       // optionally, a third argument with configuration options can be passed.
       // See below for more about options.
-      timeline = new TL.Timeline('timeline-embed',
-        'https://docs.google.com/spreadsheets/d/1bU_XUaZQzap2fui3XZ5tXCQ24Ue4U6DUroBRGedIM_U/edit#');
+      timeline = new TL.Timeline(
+        'timeline-embed',
+        'https://docs.google.com/spreadsheets/d/1bU_XUaZQzap2fui3XZ5tXCQ24Ue4U6DUroBRGedIM_U/edit#',
+         options
+      );
     </script>
   </body>
 </html>
