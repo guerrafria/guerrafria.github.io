@@ -20,7 +20,7 @@ La línea de tiempo está alojada en un servidor de Github como un *Github Pages
 En este caso, la línea del tiempo consiste en un archivo `HTML` que instancia un objeto de `Javascript` de Línea de Tiempo para poder cargarlo de manera dinámica.
 
 ## ¿Dónde ubicar la información?
-La información que se muestra en la línea de tiempo es accesible a través de [este enlace a Hojas de Cálculo de Google](https://docs.google.com/spreadsheets/d/e/2PACX-1vRE0sgkiOzu9DAnoUD1I270hNOKTNWK6dCSinWr_lwXNYRwFY0ceH_nlK_YDFPgwdPELffGAcNKUd1I/pubhtml) como un archivo de solo edición.
+La información que se muestra en la línea de tiempo es accesible a través de [este enlace a Hojas de Cálculo de Google](https://docs.google.com/spreadsheets/d/e/2PACX-1vRE0sgkiOzu9DAnoUD1I270hNOKTNWK6dCSinWr_lwXNYRwFY0ceH_nlK_YDFPgwdPELffGAcNKUd1I/pubhtml) como un archivo de solo lectura.
 
 ## ¿Cómo puedo añadir o modificar la información de la línea de tiempo?
 Se debe solicitar acceso y permisos de edición al archivo de Hojas de Cálculo de Google. Una vez el permiso sea concedido, se debe llenar una fila nueva con la información que se desee ingresar. Se debe tener en consideración el formato que _exige_ TimeLineJS para este archivo, de esta manera, _NO DEBEN CAMBIARSE_ los títulos de las columnas, ni su orden, entre otros. Solamente se permite modificar la información que está dentro de una fila.
